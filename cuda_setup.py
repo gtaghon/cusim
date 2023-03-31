@@ -64,7 +64,7 @@ def get_cuda_compute(cuda_ver):
       compute = "75"
     if cuda_ver == 110:
       compute = "80"
-    if cuda_ver == 111:
+    if cuda_ver >= 111: #Allow later CUDA toolkit. Tested on 11.7
       compute = "86"
   return compute
 
@@ -79,7 +79,7 @@ def get_cuda_arch(cuda_ver):
       arch = "50"
     if cuda_ver == 110:
       arch = "52"
-    if cuda_ver == 111:
+    if cuda_ver >= 111: #Allow later CUDA toolkit. Tested on 11.7
       arch = "80"
   return arch
 
